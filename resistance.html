@@ -1,0 +1,31 @@
+<script type="text/javascript">
+var input = window.prompt("What colors do you seen, sepearate with a space");
+
+var color_array = input.split(" ");
+
+if (color_array.length == 1) {
+  color_to_number(color_array[0]);
+} else if (color_array.length == 2) {
+  var num1 = color_to_number(color_array[0]);
+  var num2 = color_to_number(color_array[1]);
+  console.log(num1 + num2);
+} else {
+  console.log("Not in the system");
+}
+
+// Why is the console.log output coming out on sepearate lines despite being in the same output on line 12
+
+function color_to_number(color) {
+  switch (color) {
+    case "black":
+      console.log(1);
+      break;
+    case "brown":
+      console.log(2);
+      break;
+    case "red":
+      console.log(3);
+      break;
+  }
+}
+</script>
